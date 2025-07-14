@@ -196,11 +196,30 @@ input:focus, textarea:focus {
 /* Text hover effects */
 .text-hover-glow {
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .text-hover-glow:hover {
   text-shadow: 0 0 20px rgba(255, 107, 53, 0.8);
   transform: scale(1.02);
+}
+
+.text-hover-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0) 0%, rgba(255, 107, 53, 0) 70%, rgba(255, 107, 53, 0.2) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.text-hover-glow:hover::before {
+  opacity: 1;
 }
 
 /* Skew effect */
