@@ -5,7 +5,7 @@ import Homepage from "./pages/Homepage";
 import Contact from "./pages/Contact";
 import Hiring from "./pages/Hiring";
 import Vision from "./pages/Vision";
-import CursorBackground from "./components/CursorBackground";
+import EnhancedCursorBackground from "./components/EnhancedCursorBackground";
 
 function App() {
   useEffect(() => {
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App min-h-screen bg-black">
-      <CursorBackground />
+      <EnhancedCursorBackground />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
