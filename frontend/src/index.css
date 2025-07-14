@@ -54,15 +54,15 @@ html {
 
 /* Cursor styles */
 * {
-  cursor: default;
+  cursor: none !important;
 }
 
 a, button, [role="button"] {
-  cursor: pointer;
+  cursor: none !important;
 }
 
 input, textarea {
-  cursor: text;
+  cursor: none !important;
 }
 
 /* Animation utilities */
@@ -72,8 +72,28 @@ input, textarea {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 53, 0.3); }
-  50% { box-shadow: 0 0 30px rgba(255, 107, 53, 0.6); }
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.6), 0 0 40px rgba(255, 107, 53, 0.3);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes text-glow {
+  0%, 100% { 
+    text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+  }
+  50% { 
+    text-shadow: 0 0 20px rgba(255, 107, 53, 0.8), 0 0 30px rgba(255, 107, 53, 0.5);
+  }
 }
 
 .animate-float {
@@ -84,16 +104,24 @@ input, textarea {
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.animate-text-glow {
+  animation: text-glow 2s ease-in-out infinite;
+}
+
 /* Glassmorphism utilities */
 .glass {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .glass-orange {
   background: rgba(255, 107, 53, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 107, 53, 0.2);
 }
 
@@ -109,18 +137,104 @@ input, textarea {
 input:focus, textarea:focus {
   outline: none;
   border-color: #ff6b35;
-  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.2);
 }
 
 /* Button hover effects */
-button:hover {
-  transform: translateY(-1px);
+.btn-hover-lift {
+  transition: all 0.3s ease;
+}
+
+.btn-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+}
+
+/* Shimmer effect for buttons */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-shimmer:hover::before {
+  left: 100%;
 }
 
 /* Card hover effects */
 .card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(255, 107, 53, 0.15);
+}
+
+/* Text hover effects */
+.text-hover-glow {
+  transition: all 0.3s ease;
+}
+
+.text-hover-glow:hover {
+  text-shadow: 0 0 20px rgba(255, 107, 53, 0.8);
+  transform: scale(1.02);
+}
+
+/* Skew effect */
+.skew-hover {
+  transition: all 0.3s ease;
+}
+
+.skew-hover:hover {
+  transform: skewX(-2deg) scale(1.05);
+}
+
+/* Pulse effect for important elements */
+.pulse-important {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Staggered animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Fade in from bottom */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Typing cursor */
+.typing-cursor {
+  display: inline-block;
+  background-color: #ff6b35;
+  margin-left: 2px;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 @layer base {
