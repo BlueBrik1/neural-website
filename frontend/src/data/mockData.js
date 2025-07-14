@@ -1,92 +1,3 @@
-export const skillsData = {
-  beginner: [
-    {
-      id: 'prompt-basics',
-      title: 'Prompt Basics',
-      description: 'Master the fundamentals of AI communication',
-      progress: 85,
-      completed: true,
-      level: 1,
-      icon: '🎯',
-      position: { x: 50, y: 100 }
-    },
-    {
-      id: 'ai-tools-intro',
-      title: 'AI Tools Intro',
-      description: 'Get familiar with popular AI platforms',
-      progress: 70,
-      completed: false,
-      level: 1,
-      icon: '🛠️',
-      position: { x: 150, y: 100 }
-    }
-  ],
-  intermediate: [
-    {
-      id: 'prompt-engineering',
-      title: 'Prompt Engineering',
-      description: 'Advanced techniques for optimal AI responses',
-      progress: 45,
-      completed: false,
-      level: 2,
-      icon: '⚙️',
-      position: { x: 25, y: 200 }
-    },
-    {
-      id: 'model-selection',
-      title: 'Model Selection',
-      description: 'Choose the right AI model for your needs',
-      progress: 30,
-      completed: false,
-      level: 2,
-      icon: '🎲',
-      position: { x: 100, y: 200 }
-    },
-    {
-      id: 'ai-image-gen',
-      title: 'AI Image Generation',
-      description: 'Create stunning visuals with AI',
-      progress: 60,
-      completed: false,
-      level: 2,
-      icon: '🎨',
-      position: { x: 175, y: 200 }
-    }
-  ],
-  advanced: [
-    {
-      id: 'ai-ethics',
-      title: 'AI Ethics',
-      description: 'Responsible AI usage and best practices',
-      progress: 20,
-      completed: false,
-      level: 3,
-      icon: '⚖️',
-      position: { x: 50, y: 300 }
-    },
-    {
-      id: 'data-analysis',
-      title: 'Data Analysis with AI',
-      description: 'Unlock insights from data using AI',
-      progress: 15,
-      completed: false,
-      level: 3,
-      icon: '📊',
-      position: { x: 125, y: 300 }
-    },
-    {
-      id: 'ai-automation',
-      title: 'AI Automation',
-      description: 'Automate workflows with AI agents',
-      progress: 10,
-      completed: false,
-      level: 3,
-      icon: '🤖',
-      position: { x: 200, y: 300 }
-    }
-  ]
-};
-
 export const statsData = {
   promptsCompleted: 12847,
   activeUsers: 2341,
@@ -127,35 +38,119 @@ export const featuresData = [
     title: 'Learn by Doing',
     description: 'Practice with real AI tools and get instant feedback on your prompts',
     icon: '🎯',
-    color: 'from-blue-500 to-purple-600'
+    color: 'from-orange-500 to-red-600'
   },
   {
     id: 2,
     title: 'AI Feedback',
     description: 'Get personalized suggestions to improve your AI interaction skills',
     icon: '🤖',
-    color: 'from-purple-500 to-pink-600'
+    color: 'from-orange-600 to-orange-700'
   },
   {
     id: 3,
     title: 'Progress Tracking',
     description: 'Visual skill trees and achievements keep you motivated',
     icon: '📈',
-    color: 'from-green-500 to-teal-600'
+    color: 'from-red-500 to-orange-500'
   },
   {
     id: 4,
     title: 'Community',
     description: 'Connect with other AI learners and share your progress',
     icon: '👥',
-    color: 'from-orange-500 to-red-600'
+    color: 'from-orange-400 to-red-500'
   }
 ];
 
 export const typingPhrases = [
-  'Learn Prompt Engineering... Fast.',
-  'Master AI Tools... Efficiently.',
-  'Build AI Skills... Systematically.',
+  'Learn AI like a language.',
+  'Master AI tools... Efficiently.',
+  'Build AI skills... Systematically.',
   'Think Like AI... Naturally.',
   'Create with AI... Confidently.'
+];
+
+export const teamData = [
+  {
+    id: 1,
+    name: 'Alex Rivera',
+    role: 'CEO & Founder',
+    avatar: '👨‍💼',
+    bio: 'Former AI researcher at Google, passionate about democratizing AI education.'
+  },
+  {
+    id: 2,
+    name: 'Sam Chen',
+    role: 'CTO',
+    avatar: '👩‍💻',
+    bio: 'Full-stack engineer with 8+ years in EdTech and AI platforms.'
+  },
+  {
+    id: 3,
+    name: 'Maya Patel',
+    role: 'Head of Product',
+    avatar: '👩‍🔬',
+    bio: 'Product strategist focused on creating engaging learning experiences.'
+  }
+];
+
+export const jobOpenings = [
+  {
+    id: 1,
+    title: 'Senior Full Stack Developer',
+    type: 'Full-time',
+    location: 'Remote',
+    description: 'Join our core engineering team to build the next generation of AI learning tools.',
+    requirements: [
+      '5+ years of React/Node.js experience',
+      'Experience with AI/ML integrations',
+      'Strong understanding of modern web technologies',
+      'Passion for education technology'
+    ],
+    responsibilities: [
+      'Develop and maintain our learning platform',
+      'Integrate AI models and tools',
+      'Collaborate with design and product teams',
+      'Optimize performance and user experience'
+    ]
+  },
+  {
+    id: 2,
+    title: 'Frontend Developer',
+    type: 'Full-time',
+    location: 'Remote',
+    description: 'Create beautiful, interactive learning experiences for our AI education platform.',
+    requirements: [
+      '3+ years of React/TypeScript experience',
+      'Strong CSS and animation skills',
+      'Experience with 3D graphics (Three.js) preferred',
+      'Eye for design and user experience'
+    ],
+    responsibilities: [
+      'Build responsive, animated user interfaces',
+      'Implement interactive learning components',
+      'Collaborate with designers on UI/UX',
+      'Optimize frontend performance'
+    ]
+  },
+  {
+    id: 3,
+    title: 'Backend Developer',
+    type: 'Full-time',
+    location: 'Remote',
+    description: 'Build robust, scalable backend systems to power our AI learning platform.',
+    requirements: [
+      '4+ years of Python/Node.js experience',
+      'Experience with databases and APIs',
+      'Knowledge of AI/ML model deployment',
+      'Strong problem-solving skills'
+    ],
+    responsibilities: [
+      'Design and implement APIs',
+      'Manage database architecture',
+      'Deploy and maintain AI models',
+      'Ensure system security and scalability'
+    ]
+  }
 ];
