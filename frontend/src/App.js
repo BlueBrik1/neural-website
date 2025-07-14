@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
+import Contact from "./pages/Contact";
+import Hiring from "./pages/Hiring";
+import Vision from "./pages/Vision";
 import CursorBackground from "./components/CursorBackground";
 
 function App() {
@@ -11,11 +14,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
+    <div className="App min-h-screen bg-black">
       <CursorBackground />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/hiring" element={<Hiring />} />
+          <Route path="/vision" element={<Vision />} />
         </Routes>
       </BrowserRouter>
     </div>
