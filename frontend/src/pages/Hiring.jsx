@@ -17,7 +17,7 @@ const Hiring = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
-      <ThreeScene shapes="spheres" count={4} color="#ff6b35" />
+      <ThreeScene shapes="spheres" count={8} color="#ff6b35" />
       <Navigation />
       
       <div className="relative z-10 pt-24 px-4">
@@ -183,7 +183,7 @@ const Hiring = () => {
 
           {/* Why Join Us */}
           <FadeInText delay={1.6}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 { icon: '🚀', title: 'Fast Growth', desc: 'Join a rapidly scaling startup with massive potential' },
                 { icon: '🌍', title: 'Remote First', desc: 'Work from anywhere with flexible hours and autonomy' },

@@ -31,7 +31,7 @@ const Contact = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
-      <ThreeScene shapes="spheres" count={4} color="#ff6b35" />
+      <ThreeScene shapes="spheres" count={8} color="#ff6b35" />
       <Navigation />
       
       <div className="relative z-10 pt-24 px-4">

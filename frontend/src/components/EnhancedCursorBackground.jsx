@@ -1,17 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
+import React, { useEffect, useRef } from 'react';
 
 const EnhancedCursorBackground = () => {
   const canvasRef = useRef(null);
-  const cursorRef = useRef(null);
-  const mouseRef = useRef({ x: 0, y: 0 });
-  const cursorPosRef = useRef({ x: 0, y: 0 });
   const particlesRef = useRef([]);
   const nodesRef = useRef([]);
   const animationRef = useRef();
-  const [isHovering, setIsHovering] = useState(false);
+  const mouseRef = useRef({ x: 0, y: 0 });
 
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const [dimensions, setDimensions] = React.useState({ width: 0, height: 0 });
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -73,14 +69,14 @@ const EnhancedCursorBackground = () => {
 
       // Cursor reactive glow
       const cursorDistance = Math.sqrt(
-        Math.pow(cursorPosRef.current.x - dimensions.width / 2, 2) +
-        Math.pow(cursorPosRef.current.y - dimensions.height / 2, 2)
+        Math.pow(mouseRef.current.x - dimensions.width / 2, 2) +
+        Math.pow(mouseRef.current.y - dimensions.height / 2, 2)
       );
       const cursorInfluence = Math.max(0, 1 - cursorDistance / (dimensions.width * 0.3));
       
       const cursorGradient = ctx.createRadialGradient(
-        cursorPosRef.current.x, cursorPosRef.current.y, 0,
-        cursorPosRef.current.x, cursorPosRef.current.y, 150 + cursorInfluence * 100
+        mouseRef.current.x, mouseRef.current.y, 0,
+        mouseRef.current.x, mouseRef.current.y, 150 + cursorInfluence * 100
       );
       cursorGradient.addColorStop(0, `rgba(255, 107, 53, ${0.15 + cursorInfluence * 0.1})`);
       cursorGradient.addColorStop(0.5, `rgba(255, 107, 53, ${0.08 + cursorInfluence * 0.05})`);
@@ -94,8 +90,8 @@ const EnhancedCursorBackground = () => {
         particle.y += particle.vy;
 
         // Cursor attraction
-        const dx = cursorPosRef.current.x - particle.x;
-        const dy = cursorPosRef.current.y - particle.y;
+        const dx = mouseRef.current.x - particle.x;
+        const dy = mouseRef.current.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
         
         if (distance < 120) {
@@ -190,70 +186,23 @@ const EnhancedCursorBackground = () => {
   useEffect(() => {
     const handleMouseMove = (e) => {
       mouseRef.current = { x: e.clientX, y: e.clientY };
-      
-      // Smooth cursor following with GSAP
-      gsap.to(cursorPosRef.current, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.3,
-        ease: "power2.out"
-      });
-    };
-
-    const handleMouseOver = (e) => {
-      const target = e.target;
-      if (target.tagName === 'BUTTON' || target.tagName === 'A' || target.closest('button') || target.closest('a')) {
-        setIsHovering(true);
-      }
-    };
-
-    const handleMouseOut = () => {
-      setIsHovering(false);
     };
 
     window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseover', handleMouseOver);
-    window.addEventListener('mouseout', handleMouseOut);
     
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseover', handleMouseOver);
-      window.removeEventListener('mouseout', handleMouseOut);
     };
   }, []);
 
   return (
-    <>
-      <canvas
-        ref={canvasRef}
-        width={dimensions.width}
-        height={dimensions.height}
-        className="fixed inset-0 pointer-events-none z-0"
-        style={{ background: 'transparent' }}
-      />
-      
-      {/* Cursor follower */}
-      <div
-        ref={cursorRef}
-        className={`fixed pointer-events-none z-50 transition-all duration-300 ${
-          isHovering ? 'scale-150' : 'scale-100'
-        }`}
-        style={{
-          left: mouseRef.current.x - 15,
-          top: mouseRef.current.y - 15,
-          width: '30px',
-          height: '30px',
-          background: isHovering 
-            ? 'radial-gradient(circle, rgba(255, 107, 53, 0.6) 0%, rgba(255, 107, 53, 0.3) 30%, rgba(255, 107, 53, 0.1) 60%, transparent 100%)'
-            : 'radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 107, 53, 0.4) 30%, rgba(255, 107, 53, 0.1) 60%, transparent 100%)',
-          borderRadius: '50%',
-          border: '2px solid rgba(255, 107, 53, 0.5)',
-          boxShadow: isHovering 
-            ? '0 0 20px rgba(255, 107, 53, 0.6)' 
-            : '0 0 10px rgba(255, 107, 53, 0.3)',
-        }}
-      />
-    </>
+    <canvas
+      ref={canvasRef}
+      width={dimensions.width}
+      height={dimensions.height}
+      className="fixed inset-0 pointer-events-none z-0"
+      style={{ background: 'transparent' }}
+    />
   );
 };
 

@@ -16,7 +16,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000;
   color: #ffffff;
-  cursor: none;
 }
 
 code {
@@ -53,17 +52,33 @@ html {
   color: #000000;
 }
 
-/* Cursor styles */
+/* Custom cursor with glow */
 * {
-  cursor: none;
+  cursor: default;
 }
 
 a, button, [role="button"] {
-  cursor: none;
+  cursor: pointer;
 }
 
 input, textarea {
-  cursor: none;
+  cursor: text;
+}
+
+/* Add subtle glow around cursor */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.3) 0%, rgba(255, 107, 53, 0.1) 40%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
 }
 
 /* Animation utilities */

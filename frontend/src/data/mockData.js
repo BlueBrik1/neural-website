@@ -152,5 +152,24 @@ export const jobOpenings = [
       'Deploy and maintain AI models',
       'Ensure system security and scalability'
     ]
+  },
+  {
+    id: 4,
+    title: 'Laravel Expert',
+    type: 'Full-time',
+    location: 'Remote',
+    description: 'Lead our PHP development initiatives and build enterprise-grade learning management systems.',
+    requirements: [
+      '5+ years of Laravel/PHP experience',
+      'Experience with MySQL and Redis',
+      'Knowledge of RESTful API design',
+      'Experience with educational platforms preferred'
+    ],
+    responsibilities: [
+      'Develop Laravel-based learning modules',
+      'Integrate with existing React frontend',
+      'Build scalable API endpoints',
+      'Implement security best practices'
+    ]
   }
 ];
