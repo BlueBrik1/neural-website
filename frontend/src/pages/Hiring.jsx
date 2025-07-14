@@ -17,7 +17,7 @@ const Hiring = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
-      <ThreeScene shapes="cubes" count={6} color="#ff6b35" />
+      <ThreeScene shapes="spheres" count={4} color="#ff6b35" />
       <Navigation />
       
       <div className="relative z-10 pt-24 px-4">
@@ -102,7 +102,7 @@ const Hiring = () => {
             <div className="mb-16">
               <div className="text-center mb-8">
                 <GlowText>
-                  <h2 className="text-3xl font-bold">Meet the Team</h2>
+                  <h2 className="text-3xl font-bold text-white">Meet the Team</h2>
                 </GlowText>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -113,7 +113,7 @@ const Hiring = () => {
                         <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center text-3xl">
                           {member.avatar}
                         </div>
-                        <h3 className="text-xl font-bold mb-2">{member.name}</h3>
+                        <h3 className="text-xl font-bold mb-2 text-white">{member.name}</h3>
                         <p className="text-orange-400 font-semibold mb-3">{member.role}</p>
                         <p className="text-gray-300 text-sm">{member.bio}</p>
                       </CardContent>
@@ -129,7 +129,7 @@ const Hiring = () => {
             <div className="mb-16">
               <div className="text-center mb-8">
                 <GlowText>
-                  <h2 className="text-3xl font-bold">Open Positions</h2>
+                  <h2 className="text-3xl font-bold text-white">Open Positions</h2>
                 </GlowText>
               </div>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -139,7 +139,7 @@ const Hiring = () => {
                       <CardContent className="p-6">
                         <div className="flex items-center justify-between mb-4">
                           <GlowText>
-                            <h3 className="text-xl font-bold">{job.title}</h3>
+                            <h3 className="text-xl font-bold text-white">{job.title}</h3>
                           </GlowText>
                           <div className="flex gap-2">
                             <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30">
@@ -197,7 +197,7 @@ const Hiring = () => {
                         {item.icon}
                       </div>
                       <GlowText>
-                        <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                        <h3 className="text-lg font-bold mb-2 text-white">{item.title}</h3>
                       </GlowText>
                       <p className="text-gray-300 text-sm">{item.desc}</p>
                     </CardContent>
@@ -214,7 +214,7 @@ const Hiring = () => {
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
           <div className="bg-gray-900/95 backdrop-blur-sm rounded-xl border border-white/20 p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl font-bold">{selectedJob.title}</h3>
+              <h3 className="text-2xl font-bold text-white">{selectedJob.title}</h3>
               <div className="flex gap-2">
                 <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30">
                   {selectedJob.type}

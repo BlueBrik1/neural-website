@@ -39,7 +39,7 @@ const EnhancedCursorBackground = () => {
       vx: (Math.random() - 0.5) * 0.3,
       vy: (Math.random() - 0.5) * 0.3,
       size: Math.random() * 3 + 1,
-      opacity: Math.random() * 0.6 + 0.1,
+      opacity: Math.random() * 0.6 + 0.3,
       pulseOffset: Math.random() * Math.PI * 2
     }));
 
@@ -65,8 +65,8 @@ const EnhancedCursorBackground = () => {
         dimensions.width / 2, dimensions.height / 2, 0,
         dimensions.width / 2, dimensions.height / 2, dimensions.width / 2
       );
-      ambientGradient.addColorStop(0, 'rgba(255, 107, 53, 0.02)');
-      ambientGradient.addColorStop(0.5, 'rgba(255, 107, 53, 0.01)');
+      ambientGradient.addColorStop(0, 'rgba(255, 107, 53, 0.03)');
+      ambientGradient.addColorStop(0.5, 'rgba(255, 107, 53, 0.02)');
       ambientGradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
       ctx.fillStyle = ambientGradient;
       ctx.fillRect(0, 0, dimensions.width, dimensions.height);
@@ -82,8 +82,8 @@ const EnhancedCursorBackground = () => {
         cursorPosRef.current.x, cursorPosRef.current.y, 0,
         cursorPosRef.current.x, cursorPosRef.current.y, 150 + cursorInfluence * 100
       );
-      cursorGradient.addColorStop(0, `rgba(255, 107, 53, ${0.1 + cursorInfluence * 0.1})`);
-      cursorGradient.addColorStop(0.5, `rgba(255, 107, 53, ${0.05 + cursorInfluence * 0.05})`);
+      cursorGradient.addColorStop(0, `rgba(255, 107, 53, ${0.15 + cursorInfluence * 0.1})`);
+      cursorGradient.addColorStop(0.5, `rgba(255, 107, 53, ${0.08 + cursorInfluence * 0.05})`);
       cursorGradient.addColorStop(1, 'rgba(255, 107, 53, 0)');
       ctx.fillStyle = cursorGradient;
       ctx.fillRect(0, 0, dimensions.width, dimensions.height);
@@ -122,8 +122,8 @@ const EnhancedCursorBackground = () => {
           particle.x, particle.y, 0,
           particle.x, particle.y, particle.size * 4
         );
-        glowGradient.addColorStop(0, `rgba(255, 255, 255, ${particle.opacity * pulse})`);
-        glowGradient.addColorStop(0.3, `rgba(255, 107, 53, ${particle.opacity * 0.3})`);
+        glowGradient.addColorStop(0, `rgba(255, 255, 255, ${particle.opacity * pulse * 0.8})`);
+        glowGradient.addColorStop(0.3, `rgba(255, 107, 53, ${particle.opacity * 0.4})`);
         glowGradient.addColorStop(1, 'rgba(255, 107, 53, 0)');
         
         ctx.fillStyle = glowGradient;
@@ -147,7 +147,7 @@ const EnhancedCursorBackground = () => {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < 180) {
-              const opacity = (1 - distance / 180) * 0.15;
+              const opacity = (1 - distance / 180) * 0.2;
               ctx.beginPath();
               ctx.moveTo(node.x, node.y);
               ctx.lineTo(otherNode.x, otherNode.y);
@@ -167,8 +167,8 @@ const EnhancedCursorBackground = () => {
           node.x, node.y, 0,
           node.x, node.y, node.size * 2
         );
-        nodeGradient.addColorStop(0, `rgba(255, 255, 255, ${0.4 * pulse})`);
-        nodeGradient.addColorStop(0.5, `rgba(255, 107, 53, ${0.2 * pulse})`);
+        nodeGradient.addColorStop(0, `rgba(255, 255, 255, ${0.5 * pulse})`);
+        nodeGradient.addColorStop(0.5, `rgba(255, 107, 53, ${0.3 * pulse})`);
         nodeGradient.addColorStop(1, 'rgba(255, 107, 53, 0)');
         
         ctx.fillStyle = nodeGradient;
@@ -235,19 +235,22 @@ const EnhancedCursorBackground = () => {
       {/* Cursor follower */}
       <div
         ref={cursorRef}
-        className={`fixed pointer-events-none z-10 transition-all duration-300 ${
+        className={`fixed pointer-events-none z-50 transition-all duration-300 ${
           isHovering ? 'scale-150' : 'scale-100'
         }`}
         style={{
-          left: cursorPosRef.current.x - 20,
-          top: cursorPosRef.current.y - 20,
-          width: '40px',
-          height: '40px',
+          left: mouseRef.current.x - 15,
+          top: mouseRef.current.y - 15,
+          width: '30px',
+          height: '30px',
           background: isHovering 
-            ? 'radial-gradient(circle, rgba(255, 107, 53, 0.3) 0%, rgba(255, 107, 53, 0.1) 50%, transparent 70%)'
-            : 'radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 107, 53, 0.05) 50%, transparent 70%)',
+            ? 'radial-gradient(circle, rgba(255, 107, 53, 0.6) 0%, rgba(255, 107, 53, 0.3) 30%, rgba(255, 107, 53, 0.1) 60%, transparent 100%)'
+            : 'radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 107, 53, 0.4) 30%, rgba(255, 107, 53, 0.1) 60%, transparent 100%)',
           borderRadius: '50%',
-          filter: 'blur(8px)',
+          border: '2px solid rgba(255, 107, 53, 0.5)',
+          boxShadow: isHovering 
+            ? '0 0 20px rgba(255, 107, 53, 0.6)' 
+            : '0 0 10px rgba(255, 107, 53, 0.3)',
         }}
       />
     </>

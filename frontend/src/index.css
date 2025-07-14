@@ -16,6 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000;
   color: #ffffff;
+  cursor: none;
 }
 
 code {
@@ -54,15 +55,15 @@ html {
 
 /* Cursor styles */
 * {
-  cursor: none !important;
+  cursor: none;
 }
 
 a, button, [role="button"] {
-  cursor: none !important;
+  cursor: none;
 }
 
 input, textarea {
-  cursor: none !important;
+  cursor: none;
 }
 
 /* Animation utilities */
@@ -235,6 +236,29 @@ input:focus, textarea:focus {
 @keyframes blink {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
+}
+
+/* Ensure text is visible */
+h1, h2, h3, h4, h5, h6, p, span, div, a, button {
+  color: inherit;
+  opacity: 1;
+}
+
+/* Force text visibility */
+.text-white {
+  color: #ffffff !important;
+}
+
+.text-gray-300 {
+  color: #d1d5db !important;
+}
+
+.text-gray-400 {
+  color: #9ca3af !important;
+}
+
+.text-orange-400 {
+  color: #fb923c !important;
 }
 
 @layer base {

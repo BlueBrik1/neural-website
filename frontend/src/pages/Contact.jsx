@@ -60,12 +60,12 @@ const Contact = () => {
               <Card className="bg-white/5 backdrop-blur-sm border-white/10 glass">
                 <CardContent className="p-8">
                   <GlowText>
-                    <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
+                    <h2 className="text-2xl font-bold mb-6 text-white">Send us a message</h2>
                   </GlowText>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium mb-2">Name</label>
+                        <label className="block text-sm font-medium mb-2 text-white">Name</label>
                         <Input
                           type="text"
                           name="name"
@@ -77,7 +77,7 @@ const Contact = () => {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-2">Email</label>
+                        <label className="block text-sm font-medium mb-2 text-white">Email</label>
                         <Input
                           type="email"
                           name="email"
@@ -91,7 +91,7 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium mb-2">Subject</label>
+                      <label className="block text-sm font-medium mb-2 text-white">Subject</label>
                       <Input
                         type="text"
                         name="subject"
@@ -104,7 +104,7 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium mb-2">Message</label>
+                      <label className="block text-sm font-medium mb-2 text-white">Message</label>
                       <Textarea
                         name="message"
                         value={formData.message}
@@ -144,7 +144,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <GlowText>
-                            <h3 className="text-lg font-semibold">{item.title}</h3>
+                            <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                           </GlowText>
                           <p className="text-gray-400">{item.value}</p>
                         </div>

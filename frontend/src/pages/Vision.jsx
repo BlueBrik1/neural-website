@@ -8,7 +8,7 @@ import { FadeInText, StaggeredText, GlowText, SkewText } from '../components/Ani
 const Vision = () => {
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
-      <ThreeScene shapes="brains" count={8} color="#ff6b35" />
+      <ThreeScene shapes="spheres" count={4} color="#ff6b35" />
       <Navigation />
       
       <div className="relative z-10 pt-24 px-4">
@@ -54,7 +54,7 @@ const Vision = () => {
             <FadeInText delay={0.6}>
               <div className="text-center mb-8">
                 <GlowText>
-                  <h2 className="text-3xl font-bold">Core Values</h2>
+                  <h2 className="text-3xl font-bold text-white">Core Values</h2>
                 </GlowText>
               </div>
             </FadeInText>
@@ -71,7 +71,7 @@ const Vision = () => {
                         {value.icon}
                       </div>
                       <GlowText>
-                        <h3 className="text-xl font-bold mb-3">{value.title}</h3>
+                        <h3 className="text-xl font-bold mb-3 text-white">{value.title}</h3>
                       </GlowText>
                       <p className="text-gray-300">{value.desc}</p>
                     </CardContent>
@@ -112,7 +112,7 @@ const Vision = () => {
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 glass">
                   <CardContent className="p-8">
                     <GlowText>
-                      <h3 className="text-2xl font-bold mb-6 text-center">The AI Skills Gap</h3>
+                      <h3 className="text-2xl font-bold mb-6 text-center text-white">The AI Skills Gap</h3>
                     </GlowText>
                     <div className="space-y-4">
                       <div className="flex justify-between items-center">
@@ -141,7 +141,7 @@ const Vision = () => {
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 lg:order-1 glass">
                   <CardContent className="p-8">
                     <GlowText>
-                      <h3 className="text-2xl font-bold mb-6 text-center">Our Approach</h3>
+                      <h3 className="text-2xl font-bold mb-6 text-center text-white">Our Approach</h3>
                     </GlowText>
                     <div className="space-y-4">
                       {[
@@ -223,7 +223,7 @@ const Vision = () => {
           <FadeInText delay={4.0}>
             <div className="text-center">
               <GlowText>
-                <h2 className="text-3xl font-bold mb-6">Join Us in Shaping the Future</h2>
+                <h2 className="text-3xl font-bold mb-6 text-white">Join Us in Shaping the Future</h2>
               </GlowText>
               <FadeInText delay={4.2}>
                 <StaggeredText 

@@ -28,7 +28,7 @@ const Homepage = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
-      <ThreeScene shapes="mixed" count={7} color="#ff6b35" />
+      <ThreeScene shapes="spheres" count={4} color="#ff6b35" />
       <Navigation />
       
       <div className="relative z-10">
@@ -42,7 +42,7 @@ const Homepage = () => {
             </FadeInText>
             
             <FadeInText delay={0.3}>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
                 <EnhancedAutoTypingHeadline 
                   phrases={typingPhrases}
                   className="bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent"
@@ -64,7 +64,7 @@ const Homepage = () => {
             <FadeInText delay={0.9}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <PulseButton 
-                  className="text-lg px-8 py-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 btn-shimmer"
+                  className="text-lg px-8 py-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 btn-shimmer text-white"
                 >
                   Start Learning
                 </PulseButton>
@@ -243,7 +243,7 @@ const Homepage = () => {
             
             <FadeInText delay={0.6}>
               <PulseButton 
-                className="text-lg px-12 py-6 rounded-lg font-semibold transform hover:scale-105 btn-shimmer"
+                className="text-lg px-12 py-6 rounded-lg font-semibold transform hover:scale-105 btn-shimmer text-white"
               >
                 Start Your Journey
               </PulseButton>
@@ -261,7 +261,7 @@ const Homepage = () => {
                     <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center animate-pulse-glow">
                       <span className="text-white font-bold">N</span>
                     </div>
-                    <span className="text-xl font-bold">Neural</span>
+                    <span className="text-xl font-bold text-white">Neural</span>
                   </div>
                   <p className="text-gray-400">
                     Learn AI like a language. Built for the next-gen minds.
@@ -271,7 +271,7 @@ const Homepage = () => {
               
               <FadeInText delay={0.1}>
                 <div>
-                  <h4 className="font-bold mb-4">Company</h4>
+                  <h4 className="font-bold mb-4 text-white">Company</h4>
                   <ul className="space-y-2 text-gray-400">
                     <li><SkewText><a href="/vision" className="hover:text-white transition-colors">Our Vision</a></SkewText></li>
                     <li><SkewText><a href="/hiring" className="hover:text-white transition-colors">We're Hiring</a></SkewText></li>
@@ -282,7 +282,7 @@ const Homepage = () => {
               
               <FadeInText delay={0.2}>
                 <div>
-                  <h4 className="font-bold mb-4">Product</h4>
+                  <h4 className="font-bold mb-4 text-white">Product</h4>
                   <ul className="space-y-2 text-gray-400">
                     <li><SkewText><a href="#" className="hover:text-white transition-colors">Features</a></SkewText></li>
                     <li><SkewText><a href="#" className="hover:text-white transition-colors">Pricing</a></SkewText></li>
@@ -293,7 +293,7 @@ const Homepage = () => {
               
               <FadeInText delay={0.3}>
                 <div>
-                  <h4 className="font-bold mb-4">Support</h4>
+                  <h4 className="font-bold mb-4 text-white">Support</h4>
                   <ul className="space-y-2 text-gray-400">
                     <li><SkewText><a href="#" className="hover:text-white transition-colors">Help Center</a></SkewText></li>
                     <li><SkewText><a href="#" className="hover:text-white transition-colors">Documentation</a></SkewText></li>
