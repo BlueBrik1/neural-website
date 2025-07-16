@@ -1,8 +1,8 @@
 export const statsData = {
-  promptsCompleted: 12847,
-  activeUsers: 2341,
-  completionRate: 89,
-  avgProgress: 67
+  promptsCompleted: 35445,
+  activeUsers: 1205943,
+  completionRate: 130,
+  avgProgress: 77
 };
 
 export const testimonialsData = [
@@ -74,31 +74,31 @@ export const typingPhrases = [
 export const teamData = [
   {
     id: 1,
-    name: 'Alex Rivera',
+    name: 'Skyler Lee',
     role: 'CEO & Founder',
     avatar: '👨‍💼',
-    bio: 'Former AI researcher at Google, passionate about democratizing AI education.'
+    bio: 'High School Student passionate about AI education'
   },
   {
     id: 2,
-    name: 'Sam Chen',
-    role: 'CTO',
+    name: 'Akhil Panga',
+    role: 'Marketing Specialist',
     avatar: '👩‍💻',
-    bio: 'Full-stack engineer with 8+ years in EdTech and AI platforms.'
+    bio: 'Marketing Specialist with 2+ years in social media marketing'
   },
   {
     id: 3,
-    name: 'Maya Patel',
-    role: 'Head of Product',
+    name: 'Om Biridar',
+    role: 'Wild Card',
     avatar: '👩‍🔬',
-    bio: 'Product strategist focused on creating engaging learning experiences.'
+    bio: 'Specializes in AI and Marketing, passionate about AI education'
   }
 ];
 
 export const jobOpenings = [
   {
     id: 1,
-    title: 'Senior Full Stack Developer',
+    title: 'Full Stack Developer',
     type: 'Full-time',
     location: 'Remote',
     description: 'Join our core engineering team to build the next generation of AI learning tools.',
@@ -117,8 +117,8 @@ export const jobOpenings = [
   },
   {
     id: 2,
-    title: 'Frontend Developer',
-    type: 'Full-time',
+    title: 'Assistant Frontend Developer',
+    type: 'Part-time',
     location: 'Remote',
     description: 'Create beautiful, interactive learning experiences for our AI education platform.',
     requirements: [
@@ -136,12 +136,12 @@ export const jobOpenings = [
   },
   {
     id: 3,
-    title: 'Backend Developer',
-    type: 'Full-time',
+    title: 'Assistant Backend Developer',
+    type: 'Part-time',
     location: 'Remote',
     description: 'Build robust, scalable backend systems to power our AI learning platform.',
     requirements: [
-      '4+ years of Python/Node.js experience',
+      '2.5+ years of Python/Node.js experience',
       'Experience with databases and APIs',
       'Knowledge of AI/ML model deployment',
       'Strong problem-solving skills'
@@ -156,11 +156,11 @@ export const jobOpenings = [
   {
     id: 4,
     title: 'Laravel Expert',
-    type: 'Full-time',
+    type: 'Part-time',
     location: 'Remote',
     description: 'Lead our PHP development initiatives and build enterprise-grade learning management systems.',
     requirements: [
-      '5+ years of Laravel/PHP experience',
+      '2.5+ years of Laravel/PHP experience',
       'Experience with MySQL and Redis',
       'Knowledge of RESTful API design',
       'Experience with educational platforms preferred'

@@ -6,6 +6,7 @@ import ThreeScene from '../components/ThreeScene';
 import Navigation from '../components/Navigation';
 import { FadeInText, StaggeredText, GlowText, PulseButton } from '../components/AnimatedText';
 import { jobOpenings, teamData } from '../data/mockData';
+import { Link } from 'react-router-dom';
 
 const Hiring = () => {
   const [selectedJob, setSelectedJob] = useState(null);
@@ -254,12 +255,13 @@ const Hiring = () => {
             </div>
 
             <div className="flex gap-3 mt-8">
-              <PulseButton 
-                onClick={() => handleApply(selectedJob)}
-                className="flex-1 text-white font-semibold py-3 px-6 rounded-lg"
-              >
-                Apply Now
-              </PulseButton>
+              <Link to="/contact" className="flex-1">
+                <PulseButton 
+                  className="w-full text-white font-semibold py-3 px-6 rounded-lg"
+                >
+                  Apply Now
+                </PulseButton>
+              </Link>
               <Button 
                 variant="outline"
                 onClick={() => setSelectedJob(null)}

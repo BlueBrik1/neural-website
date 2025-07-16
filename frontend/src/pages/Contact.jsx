@@ -6,20 +6,37 @@ import { Textarea } from '../components/ui/textarea';
 import ThreeScene from '../components/ThreeScene';
 import Navigation from '../components/Navigation';
 import { FadeInText, StaggeredText, GlowText, PulseButton } from '../components/AnimatedText';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     subject: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Mock form submission
-    alert('Thank you for your message! We\'ll get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setLoading(true);
+    try {
+      await emailjs.send(
+        'service_wxtsamm',
+        'template_gnrwbug',
+        {
+          from_name: formData.name,
+          subject: formData.subject,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        },
+        'GwkhQC92lovAFp2ZM'
+      );
+      alert('Thank you for your message! We\'ll get back to you soon.');
+      setFormData({ name: '', subject: '', message: '' });
+    } catch (error) {
+      alert('There was an error sending your message. Please try again later.');
+    }
+    setLoading(false);
   };
 
   const handleChange = (e) => {
@@ -76,18 +93,6 @@ const Contact = () => {
                           placeholder="Your name"
                         />
                       </div>
-                      <div>
-                        <label className="block text-sm font-medium mb-2 text-white">Email</label>
-                        <Input
-                          type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                          className="bg-white/10 border-white/20 text-white placeholder-gray-400 focus:border-orange-500 transition-all duration-300"
-                          placeholder="your@email.com"
-                        />
-                      </div>
                     </div>
                     
                     <div>
@@ -112,15 +117,16 @@ const Contact = () => {
                         required
                         rows={6}
                         className="bg-white/10 border-white/20 text-white placeholder-gray-400 focus:border-orange-500 transition-all duration-300"
-                        placeholder="Tell us more..."
+                        placeholder="Your message (please include your email address so we can reply)"
                       />
                     </div>
                     
                     <PulseButton 
-                      type="submit" 
+                      type="submit"
                       className="w-full text-white font-semibold py-3 rounded-lg"
+                      disabled={loading}
                     >
-                      Send Message
+                      {loading ? 'Sending...' : 'Send Message'}
                     </PulseButton>
                   </form>
                 </CardContent>
@@ -130,10 +136,10 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-8">
               {[
-                { icon: '📧', title: 'Email', value: 'hello@neural.ai', desc: 'For general inquiries, partnerships, or feedback about Neural.' },
-                { icon: '💼', title: 'Careers', value: 'careers@neural.ai', desc: 'Interested in joining our team? Check out our open positions.' },
-                { icon: '🤝', title: 'Partnerships', value: 'partnerships@neural.ai', desc: 'Let\'s collaborate to advance AI education together.' },
-                { icon: '🌍', title: 'Location', value: 'San Francisco, CA', desc: 'Our headquarters, though we\'re a global remote-first team.' }
+                { icon: '📧', title: 'Email', value: 'pixelandprintofficial@gmail.com', desc: 'For general inquiries, partnerships, or feedback about Pixel and Print.' },
+                { icon: '💼', title: 'Careers', value: 'pixelandprintofficial@gmail.com', desc: 'Interested in joining our team? Check out our open positions.' },
+                { icon: '🤝', title: 'Partnerships', value: 'pixelandprintofficial@gmail.com', desc: 'Let\'s collaborate to advance AI education together.' },
+                { icon: '🌍', title: 'Location', value: 'Atlanta, GA', desc: 'Our headquarters, though we\'re a global remote-first team.' }
               ].map((item, index) => (
                 <FadeInText key={index} delay={0.6 + index * 0.1}>
                   <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 card-hover">

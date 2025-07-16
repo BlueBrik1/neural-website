@@ -8,6 +8,7 @@ import ThreeScene from '../components/ThreeScene';
 import Navigation from '../components/Navigation';
 import { FadeInText, StaggeredText, GlowText, SkewText, RotatingTaglines, PulseButton } from '../components/AnimatedText';
 import { statsData, testimonialsData, featuresData, typingPhrases } from '../data/mockData';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -63,18 +64,22 @@ const Homepage = () => {
             
             <FadeInText delay={0.9}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <PulseButton 
-                  className="text-lg px-8 py-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 btn-shimmer text-white"
-                >
-                  Start Learning
-                </PulseButton>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-white/20 text-white hover:bg-white/10 text-lg px-8 py-6 backdrop-blur-sm transition-all duration-300 btn-hover-lift"
-                >
-                  How It Works
-                </Button>
+                <Link to="/hiring" className="w-full sm:w-auto">
+                  <PulseButton 
+                    className="text-lg px-8 py-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 btn-shimmer text-white w-full"
+                  >
+                    Join Us
+                  </PulseButton>
+                </Link>
+                <Link to="/vision" className="w-full sm:w-auto">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-white/20 text-white hover:bg-white/10 text-lg px-8 py-6 backdrop-blur-sm transition-all duration-300 btn-hover-lift w-full"
+                  >
+                    How It Works
+                  </Button>
+                </Link>
               </div>
             </FadeInText>
           </div>
@@ -89,7 +94,7 @@ const Homepage = () => {
                   <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2 text-hover-glow">
                     <StatsCounter end={statsData.promptsCompleted} suffix="+" />
                   </div>
-                  <p className="text-gray-400">Prompts Completed</p>
+                  <p className="text-gray-400">Jobs Seeking AI</p>
                 </div>
               </FadeInText>
               <FadeInText delay={0.2}>
@@ -97,7 +102,7 @@ const Homepage = () => {
                   <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2 text-hover-glow">
                     <StatsCounter end={statsData.activeUsers} suffix="+" />
                   </div>
-                  <p className="text-gray-400">Active Learners</p>
+                  <p className="text-gray-400">Eager to Learn AI</p>
                 </div>
               </FadeInText>
               <FadeInText delay={0.3}>
@@ -105,7 +110,7 @@ const Homepage = () => {
                   <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2 text-hover-glow">
                     <StatsCounter end={statsData.completionRate} suffix="%" />
                   </div>
-                  <p className="text-gray-400">Completion Rate</p>
+                  <p className="text-gray-400">2025 AI Growth</p>
                 </div>
               </FadeInText>
               <FadeInText delay={0.4}>
@@ -113,7 +118,7 @@ const Homepage = () => {
                   <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2 text-hover-glow">
                     <StatsCounter end={statsData.avgProgress} suffix="%" />
                   </div>
-                  <p className="text-gray-400">Avg Progress</p>
+                  <p className="text-gray-400">Companies Using AI</p>
                 </div>
               </FadeInText>
             </div>
@@ -242,11 +247,13 @@ const Homepage = () => {
             </FadeInText>
             
             <FadeInText delay={0.6}>
-              <PulseButton 
-                className="text-lg px-12 py-6 rounded-lg font-semibold transform hover:scale-105 btn-shimmer text-white"
-              >
-                Start Your Journey
-              </PulseButton>
+              <Link to="/vision">
+                <PulseButton 
+                  className="text-lg px-12 py-6 rounded-lg font-semibold transform hover:scale-105 btn-shimmer text-white"
+                >
+                  Read More
+                </PulseButton>
+              </Link>
             </FadeInText>
           </div>
         </section>
@@ -258,9 +265,7 @@ const Homepage = () => {
               <FadeInText>
                 <div>
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center animate-pulse-glow">
-                      <span className="text-white font-bold">N</span>
-                    </div>
+                    <img src="/logo.png" alt="Neural Logo" className="w-8 h-8 rounded-lg object-contain animate-pulse-glow" />
                     <span className="text-xl font-bold text-white">Neural</span>
                   </div>
                   <p className="text-gray-400">
@@ -282,7 +287,7 @@ const Homepage = () => {
               
               <FadeInText delay={0.2}>
                 <div>
-                  <h4 className="font-bold mb-4 text-white">Product</h4>
+                  <h4 className="font-bold mb-4 text-white">Coming Soon</h4>
                   <ul className="space-y-2 text-gray-400">
                     <li><SkewText><a href="#" className="hover:text-white transition-colors">Features</a></SkewText></li>
                     <li><SkewText><a href="#" className="hover:text-white transition-colors">Pricing</a></SkewText></li>
@@ -293,7 +298,7 @@ const Homepage = () => {
               
               <FadeInText delay={0.3}>
                 <div>
-                  <h4 className="font-bold mb-4 text-white">Support</h4>
+                  <h4 className="font-bold mb-4 text-white">Coming Soon</h4>
                   <ul className="space-y-2 text-gray-400">
                     <li><SkewText><a href="#" className="hover:text-white transition-colors">Help Center</a></SkewText></li>
                     <li><SkewText><a href="#" className="hover:text-white transition-colors">Documentation</a></SkewText></li>
