@@ -7,6 +7,7 @@ import Navigation from '../components/Navigation';
 import { FadeInText, StaggeredText, GlowText, PulseButton } from '../components/AnimatedText';
 import { jobOpenings, teamData } from '../data/mockData';
 import { Link } from 'react-router-dom';
+import EnhancedCursorBackground from '../components/EnhancedCursorBackground';
 
 const Hiring = () => {
   const [selectedJob, setSelectedJob] = useState(null);
@@ -18,6 +19,7 @@ const Hiring = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
+      <EnhancedCursorBackground />
       <ThreeScene shapes="spheres" count={8} color="#ff6b35" />
       <Navigation />
       
@@ -26,7 +28,7 @@ const Hiring = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <FadeInText>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                 Join Neural
               </h1>
             </FadeInText>

@@ -47,9 +47,11 @@ const Navigation = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <Button className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300">
-              Get Started
-            </Button>
+            <Link to="/preorder">
+              <Button className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300">
+                Preorder Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -94,9 +96,11 @@ const Navigation = () => {
             >
               Contact
             </Link>
-            <Button className="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300">
-              Get Started
-            </Button>
+            <Link to="/preorder">
+              <Button className="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300">
+                Preorder Now
+              </Button>
+            </Link>
           </div>
         )}
       </div>

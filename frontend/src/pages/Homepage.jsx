@@ -9,6 +9,7 @@ import Navigation from '../components/Navigation';
 import { FadeInText, StaggeredText, GlowText, SkewText, RotatingTaglines, PulseButton } from '../components/AnimatedText';
 import { statsData, testimonialsData, featuresData, typingPhrases } from '../data/mockData';
 import { Link } from 'react-router-dom';
+import EnhancedCursorBackground from '../components/EnhancedCursorBackground';
 
 const Homepage = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -29,6 +30,7 @@ const Homepage = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
+      <EnhancedCursorBackground />
       <ThreeScene shapes="spheres" count={8} color="#ff6b35" />
       <Navigation />
       
@@ -46,7 +48,7 @@ const Homepage = () => {
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
                 <EnhancedAutoTypingHeadline 
                   phrases={typingPhrases}
-                  className="bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent"
+                  className="text-white"
                   speed={80}
                   deleteSpeed={40}
                   pauseTime={2500}
@@ -64,20 +66,20 @@ const Homepage = () => {
             
             <FadeInText delay={0.9}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/hiring" className="w-full sm:w-auto">
+                <Link to="/preorder" className="w-full sm:w-auto">
                   <PulseButton 
-                    className="text-lg px-8 py-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 btn-shimmer text-white w-full"
+                    className="text-lg px-8 h-20 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 btn-shimmer text-white w-full flex items-center justify-center"
                   >
-                    Join Us
+                    Preorder Now
                   </PulseButton>
                 </Link>
                 <Link to="/vision" className="w-full sm:w-auto">
                   <Button 
                     size="lg" 
                     variant="outline" 
-                    className="border-white/20 text-white hover:bg-white/10 text-lg px-8 py-6 backdrop-blur-sm transition-all duration-300 btn-hover-lift w-full"
+                    className="border-white/20 text-white hover:bg-white/10 text-lg px-8 h-20 rounded-lg backdrop-blur-sm transition-all duration-300 btn-hover-lift w-full flex items-center justify-center"
                   >
-                    How It Works
+                    What is Neural?
                   </Button>
                 </Link>
               </div>
@@ -131,7 +133,7 @@ const Homepage = () => {
             <div className="text-center mb-16">
               <FadeInText>
                 <GlowText>
-                  <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                     What is Neural?
                   </h2>
                 </GlowText>
@@ -171,7 +173,7 @@ const Homepage = () => {
             <div className="text-center mb-16">
               <FadeInText>
                 <GlowText>
-                  <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                     What Learners Say
                   </h2>
                 </GlowText>
@@ -233,7 +235,7 @@ const Homepage = () => {
           <div className="max-w-4xl mx-auto text-center">
             <FadeInText>
               <GlowText>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                   Ready to Learn AI?
                 </h2>
               </GlowText>

@@ -4,10 +4,12 @@ import ThreeScene from '../components/ThreeScene';
 import Navigation from '../components/Navigation';
 import StatsCounter from '../components/StatsCounter';
 import { FadeInText, StaggeredText, GlowText, SkewText } from '../components/AnimatedText';
+import EnhancedCursorBackground from '../components/EnhancedCursorBackground';
 
 const Vision = () => {
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
+      <EnhancedCursorBackground />
       <ThreeScene shapes="spheres" count={8} color="#ff6b35" />
       <Navigation />
       
@@ -17,7 +19,7 @@ const Vision = () => {
           <div className="text-center mb-16">
             <FadeInText>
               <GlowText>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                   Our Vision
                 </h1>
               </GlowText>
