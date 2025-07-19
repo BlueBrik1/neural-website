@@ -242,8 +242,18 @@ const Vision = () => {
                     </a>
                   </SkewText>
                   <SkewText>
-                    <a href="/contact" className="border border-white/20 text-white hover:bg-white/10 font-semibold py-3 px-8 rounded-lg backdrop-blur-sm transition-all duration-300 btn-hover-lift inline-block">
-                      Get in Touch
+                    <a href="/preorder" className="border border-white/20 text-white hover:bg-white/10 font-semibold py-3 px-8 rounded-lg backdrop-blur-sm transition-all duration-300 btn-hover-lift inline-block">
+                      Pre-Order
+                    </a>
+                  </SkewText>
+                  <SkewText>
+                    <a 
+                      href="https://pixelandprint.gumroad.com/l/nblya" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="border border-white/20 text-white hover:bg-white/10 font-semibold py-3 px-8 rounded-lg backdrop-blur-sm transition-all duration-300 btn-hover-lift inline-block"
+                    >
+                      Donate What You Want
                     </a>
                   </SkewText>
                 </div>

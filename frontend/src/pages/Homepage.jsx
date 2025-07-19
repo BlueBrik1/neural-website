@@ -140,7 +140,7 @@ const Homepage = () => {
               </FadeInText>
               <FadeInText delay={0.2}>
                 <StaggeredText 
-                  text="Neural is the world's first gamified platform for learning AI skills. Think Duolingo, but for prompt engineering, AI tools, and technical mastery."
+                  text="Neural is the world's first gamified platform for learning AI skills. Think Duolingo x Codecademy, but instead of Spanish or Python, you're learning AI concepts."
                   className="text-xl text-gray-300 max-w-3xl mx-auto"
                   delay={0.2}
                 />
@@ -167,14 +167,14 @@ const Homepage = () => {
           </div>
         </section>
 
-        {/* Testimonials */}
+        {/* We're Funding */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <FadeInText>
                 <GlowText>
                   <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                    What Learners Say
+                    We're Funding
                   </h2>
                 </GlowText>
               </FadeInText>
@@ -184,51 +184,52 @@ const Homepage = () => {
               <div className="relative">
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 overflow-hidden glass">
                   <CardContent className="p-8">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center text-2xl animate-pulse-glow">
-                        {testimonialsData[currentTestimonial].avatar}
+                    <div className="text-center mb-8">
+                      <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-6 animate-pulse-glow">
+                        💰
                       </div>
-                      <div>
-                        <GlowText>
-                          <h4 className="text-xl font-bold text-white">
-                            {testimonialsData[currentTestimonial].name}
-                          </h4>
-                        </GlowText>
-                        <p className="text-gray-400">
-                          {testimonialsData[currentTestimonial].role}
-                        </p>
-                      </div>
+                      <GlowText>
+                        <h3 className="text-2xl font-bold text-white mb-4">
+                          Support Our Mission
+                        </h3>
+                      </GlowText>
+                      <p className="text-lg text-gray-300 mb-6">
+                      Help us shape the future of AI learning.
+                      Support the project by preordering Neural, or grab our pay-what-you-want AI guide on Gumroad — starting at $0.
+                      </p>
                     </div>
                     
-                    <p className="text-lg text-gray-300 mb-4">
-                      "{testimonialsData[currentTestimonial].content}"
-                    </p>
-                    
-                    <div className="flex gap-1">
-                      {[...Array(testimonialsData[currentTestimonial].rating)].map((_, i) => (
-                        <span key={i} className="text-yellow-400 animate-text-glow">⭐</span>
-                      ))}
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <a 
+                        href="https://pixelandprint.gumroad.com/l/nblya" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto"
+                      >
+                        <PulseButton 
+                          className="text-lg px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 btn-shimmer text-white w-full flex items-center justify-center h-14"
+                        >
+                          Get AI Guide (Pay What You Want)
+                        </PulseButton>
+                      </a>
+                      <Link to="/preorder" className="w-full sm:w-auto">
+                        <Button 
+                          size="lg" 
+                          variant="outline" 
+                          className="border-white/20 text-white hover:bg-white/10 text-lg px-8 py-4 rounded-lg backdrop-blur-sm transition-all duration-300 btn-hover-lift w-full flex items-center justify-center h-14"
+                        >
+                          Preorder Neural
+                        </Button>
+                      </Link>
                     </div>
                   </CardContent>
                 </Card>
-                
-                <div className="flex justify-center gap-2 mt-6">
-                  {testimonialsData.map((_, index) => (
-                    <button
-                      key={index}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        index === currentTestimonial 
-                          ? 'bg-orange-400 animate-pulse-glow' 
-                          : 'bg-gray-500 hover:bg-gray-400'
-                      }`}
-                      onClick={() => setCurrentTestimonial(index)}
-                    />
-                  ))}
-                </div>
               </div>
             </FadeInText>
           </div>
         </section>
+
+        
 
         {/* CTA Section */}
         <section className="py-20 px-4">
@@ -236,13 +237,13 @@ const Homepage = () => {
             <FadeInText>
               <GlowText>
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Ready to Learn AI?
+                  Still Unsure?
                 </h2>
               </GlowText>
             </FadeInText>
             <FadeInText delay={0.3}>
               <StaggeredText 
-                text="Join thousands of learners who are mastering AI skills through Neural's gamified approach."
+                text="Read more about what problem we solve, how we solve it, and how you can benefit from it."
                 className="text-xl text-gray-300 mb-8"
                 delay={0.3}
               />
