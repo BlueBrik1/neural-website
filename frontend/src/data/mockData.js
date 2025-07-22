@@ -74,16 +74,16 @@ export const teamData = [
   {
     id: 1,
     name: 'Skyler Lee',
-    role: 'CEO & Founder',
+    role: 'Co-Founder',
     avatar: '/Skyler.png',
-    bio: 'High School Student passionate about AI education'
+    bio: 'High School Student passionate about AI education, head developer.'
   },
   {
     id: 2,
     name: 'Akhil Panga',
-    role: 'Hiring Manager & Co-Founder',
+    role: 'Co-Founder',
     avatar: '/Akhil.png',
-    bio: 'Hiring Manager with 2+ years experience, also a co-founder.'
+    bio: 'High School Student passionate about AI education, head of external affairs.'
   },
   {
     id: 3,
