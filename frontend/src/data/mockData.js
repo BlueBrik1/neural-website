@@ -65,10 +65,9 @@ export const featuresData = [
 
 export const typingPhrases = [
   'Learn AI like a language.',
-  'Master AI tools... Efficiently.',
-  'Build AI skills... Systematically.',
-  'Think Like AI... Naturally.',
-  'Create with AI... Confidently.'
+  'AI isn\'t magic. Learn how it works.',
+  'AI seems hard. We make it make sense.',
+  'Learn AI just like Algebra.'
 ];
 
 export const teamData = [
@@ -76,22 +75,22 @@ export const teamData = [
     id: 1,
     name: 'Skyler Lee',
     role: 'CEO & Founder',
-    avatar: '👨‍💼',
+    avatar: '/Skyler.png',
     bio: 'High School Student passionate about AI education'
   },
   {
     id: 2,
     name: 'Akhil Panga',
-    role: 'Marketing Specialist',
-    avatar: '👩‍💻',
-    bio: 'Marketing Specialist with 2+ years in social media marketing'
+    role: 'Hiring Manager & Co-Founder',
+    avatar: '/Akhil.png',
+    bio: 'Hiring Manager with 2+ years experience, also a co-founder.'
   },
   {
     id: 3,
-    name: 'Om Biridar',
-    role: 'Wild Card',
-    avatar: '👩‍🔬',
-    bio: 'Specializes in AI and Marketing, passionate about AI education'
+    name: 'Could be you!',
+    role: 'Take a look below.',
+    avatar: '/Other.png',
+    bio: 'We are looking for a UI/UX Designer, Full Stack Developers, and Marketing Specialist.'
   }
 ];
 
@@ -117,14 +116,14 @@ export const jobOpenings = [
   },
   {
     id: 2,
-    title: 'Assistant Frontend Developer',
+    title: 'UI/UX Designer',
     type: 'Part-time',
     location: 'Remote',
     description: 'Create beautiful, interactive learning experiences for our AI education platform.',
     requirements: [
-      '3+ years of React/TypeScript experience',
+      '3+ years of UI/UX design experience',
       'Strong CSS and animation skills',
-      'Experience with 3D graphics (Three.js) preferred',
+      'Experience with Figma preferred',
       'Eye for design and user experience'
     ],
     responsibilities: [
@@ -136,12 +135,12 @@ export const jobOpenings = [
   },
   {
     id: 3,
-    title: 'Assistant Backend Developer',
+    title: 'Assistant Full Stack Developer',
     type: 'Part-time',
     location: 'Remote',
-    description: 'Build robust, scalable backend systems to power our AI learning platform.',
+    description: 'Build robust, scalable full stack systems to power our AI learning platform.',
     requirements: [
-      '2.5+ years of Python/Node.js experience',
+      '2.5+ years of React/Node.js experience',
       'Experience with databases and APIs',
       'Knowledge of AI/ML model deployment',
       'Strong problem-solving skills'
@@ -155,21 +154,21 @@ export const jobOpenings = [
   },
   {
     id: 4,
-    title: 'Laravel Expert',
-    type: 'Part-time',
+    title: 'Marketing Specialist',
+    type: 'Full-time',
     location: 'Remote',
-    description: 'Lead our PHP development initiatives and build enterprise-grade learning management systems.',
+    description: 'Lead our marketing initiatives and build enterprise-grade learning management systems.',
     requirements: [
-      '2.5+ years of Laravel/PHP experience',
-      'Experience with MySQL and Redis',
-      'Knowledge of RESTful API design',
+      '2.5+ years of marketing experience',
+      'Experience with social media marketing',
+      'Knowledge of marketing strategies',
       'Experience with educational platforms preferred'
     ],
     responsibilities: [
-      'Develop Laravel-based learning modules',
-      'Integrate with existing React frontend',
-      'Build scalable API endpoints',
-      'Implement security best practices'
+      'Develop marketing strategies',
+      'Implement marketing campaigns',
+      'Analyze marketing data',
+      'Optimize marketing performance'
     ]
   }
 ];

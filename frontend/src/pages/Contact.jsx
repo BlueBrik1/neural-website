@@ -8,6 +8,7 @@ import Navigation from '../components/Navigation';
 import { FadeInText, StaggeredText, GlowText, PulseButton } from '../components/AnimatedText';
 import emailjs from 'emailjs-com';
 import EnhancedCursorBackground from '../components/EnhancedCursorBackground';
+import { Icon } from '@iconify/react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -138,10 +139,10 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-8">
               {[
-                { icon: '📧', title: 'Email', value: 'pixelandprintofficial@gmail.com', desc: 'For general inquiries, partnerships, or feedback about Pixel and Print.' },
-                { icon: '💼', title: 'Careers', value: 'pixelandprintofficial@gmail.com', desc: 'Interested in joining our team? Check out our open positions.' },
-                { icon: '🤝', title: 'Partnerships', value: 'pixelandprintofficial@gmail.com', desc: 'Let\'s collaborate to advance AI education together.' },
-                { icon: '🌍', title: 'Location', value: 'Atlanta, GA', desc: 'Our headquarters, though we\'re a global remote-first team.' }
+                { icon: <Icon icon="mdi:email" className="text-xl" />, title: 'Email', value: 'pixelandprintofficial@gmail.com', desc: 'For general inquiries, partnerships, or feedback about Neural.' },
+                { icon: <Icon icon="mdi:briefcase" className="text-xl" />, title: 'Careers', value: 'pixelandprintofficial@gmail.com', desc: 'Interested in joining our team? Check out our open positions.' },
+                { icon: <Icon icon="mdi:handshake" className="text-xl" />, title: 'Partnerships', value: 'pixelandprintofficial@gmail.com', desc: 'Let\'s collaborate to advance AI education together.' },
+                { icon: <Icon icon="mdi:earth" className="text-xl" />, title: 'Location', value: 'Atlanta, GA', desc: 'Our headquarters, though we\'re a global remote-first team.' }
               ].map((item, index) => (
                 <FadeInText key={index} delay={0.6 + index * 0.1}>
                   <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 card-hover">

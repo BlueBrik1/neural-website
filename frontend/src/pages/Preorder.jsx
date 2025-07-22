@@ -33,7 +33,7 @@ const Preorder = () => {
             </FadeInText>
             <FadeInText delay={0.4}>
               <StaggeredText 
-                text="Be among the first to experience the world's most engaging AI learning platform. Secure your spot and unlock exclusive early access rewards!"
+                text="You're early — and that's a win. Snag your spot to try the most fun way to learn AI. Beat the crowd, earn early rewards, and flex that brain."
                 className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
                 delay={0.4}
               />
@@ -45,8 +45,14 @@ const Preorder = () => {
                     <h2 className="text-2xl font-bold mb-4 text-orange-400">Reserve Your Neural Access</h2>
                   </GlowText>
                   <p className="text-gray-300 mb-6">
-                    Preorder now to join the next generation of AI learners. Your preorder helps us build a better, more accessible AI education for all.
+                    Your preorder helps us build a better, more accessible AI education for all. <br />
                   </p>
+                  <div className="flex items-center justify-center gap-2 mb-4">
+                    
+                    <span className="font-bold text-yellow-300 text-base md:text-lg drop-shadow-md" style={{ textShadow: '0 0 8px #fde047' }}>
+                      IMPORTANT: You MUST provide your email address so we can contact you and reserve your spot.
+                    </span>
+                  </div>
                   <a href="https://buy.stripe.com/test_14A7sK0sfdWWdLA2vdcV200" target="_blank" rel="noopener noreferrer">
                     <PulseButton className="text-lg px-10 py-5 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 btn-shimmer text-white w-full max-w-xs mx-auto">
                       Preorder Neural

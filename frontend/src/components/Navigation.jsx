@@ -13,10 +13,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Neural Logo" className="w-8 h-8 rounded-lg object-contain" />
-            <span className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              Neural
-            </span>
+            <img src="/logo.png" alt="Neural Logo" className="h-12 w-40 md:w-48 rounded-lg object-contain transition-all duration-300 cursor-pointer" style={{ minWidth: '130px', maxWidth: '130px' }} />
           </Link>
           
           <div className="hidden md:flex items-center gap-8">

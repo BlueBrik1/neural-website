@@ -9,6 +9,7 @@ import Navigation from '../components/Navigation';
 import { FadeInText, StaggeredText, GlowText, SkewText, RotatingTaglines, PulseButton } from '../components/AnimatedText';
 import { statsData, testimonialsData, featuresData, typingPhrases } from '../data/mockData';
 import { Link } from 'react-router-dom';
+import { Icon } from '@iconify/react';
 import EnhancedCursorBackground from '../components/EnhancedCursorBackground';
 
 const Homepage = () => {
@@ -22,10 +23,10 @@ const Homepage = () => {
   }, []);
 
   const taglines = [
-    "✨ Learn AI like a language. Built for the next-gen minds.",
-    "🚀 Master AI tools through gamified learning paths.",
-    "🎯 Transform your skills with interactive AI education.",
-    "⚡ Join the AI revolution with hands-on learning."
+    "Learn AI like a language. Built for the next-gen minds.",
+    "Master AI tools through gamified learning paths.",
+    "Transform your skills with interactive AI education.",
+    "Join the AI revolution with hands-on learning."
   ];
 
   return (
@@ -58,7 +59,7 @@ const Homepage = () => {
             
             <FadeInText delay={0.6}>
               <StaggeredText 
-                text="Master prompt engineering, AI tools, and technical skills through gamified learning paths designed for the modern learner."
+                text="Learn AI hands-on, with short lessons that feel more like a game than a class. You don't have to be a CS major to get started."
                 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto"
                 delay={0.6}
               />
@@ -148,21 +149,41 @@ const Homepage = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {featuresData.map((feature, index) => (
-                <FadeInText key={feature.id} delay={0.4 + index * 0.1}>
-                  <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:shadow-xl card-hover">
-                    <CardContent className="p-6 text-center">
-                      <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br ${feature.color} flex items-center justify-center text-2xl shadow-lg animate-float`}>
-                        {feature.icon}
-                      </div>
-                      <GlowText>
-                        <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
-                      </GlowText>
-                      <p className="text-gray-300">{feature.description}</p>
-                    </CardContent>
-                  </Card>
-                </FadeInText>
-              ))}
+              {featuresData.map((feature, index) => {
+                // Map emoji to icon
+                let icon;
+                switch (feature.icon) {
+                  case '🎯':
+                    icon = <Icon icon="mdi:target" className="text-2xl mb-2" />;
+                    break;
+                  case '🤖':
+                    icon = <Icon icon="mdi:robot" className="text-2xl mb-2" />;
+                    break;
+                  case '📈':
+                    icon = <Icon icon="mdi:chart-line" className="text-2xl mb-2" />;
+                    break;
+                  case '👥':
+                    icon = <Icon icon="mdi:account-group" className="text-2xl mb-2" />;
+                    break;
+                  default:
+                    icon = null;
+                }
+                return (
+                  <FadeInText key={feature.id} delay={0.4 + index * 0.1}>
+                    <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:shadow-xl card-hover">
+                      <CardContent className="p-6 text-center">
+                        <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br ${feature.color} flex flex-col items-center justify-center text-2xl shadow-lg animate-float`}>
+                          {icon}
+                        </div>
+                        <GlowText>
+                          <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
+                        </GlowText>
+                        <p className="text-gray-300">{feature.description}</p>
+                      </CardContent>
+                    </Card>
+                  </FadeInText>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -186,7 +207,7 @@ const Homepage = () => {
                   <CardContent className="p-8">
                     <div className="text-center mb-8">
                       <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-6 animate-pulse-glow">
-                        💰
+                        <Icon icon="mdi:cash-multiple" className="text-3xl text-orange-400" />
                       </div>
                       <GlowText>
                         <h3 className="text-2xl font-bold text-white mb-4">

@@ -8,6 +8,7 @@ import { FadeInText, StaggeredText, GlowText, PulseButton } from '../components/
 import { jobOpenings, teamData } from '../data/mockData';
 import { Link } from 'react-router-dom';
 import EnhancedCursorBackground from '../components/EnhancedCursorBackground';
+import { Icon } from '@iconify/react';
 
 const Hiring = () => {
   const [selectedJob, setSelectedJob] = useState(null);
@@ -34,7 +35,7 @@ const Hiring = () => {
             </FadeInText>
             <FadeInText delay={0.2}>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                We're building the future of AI education. Join our team of passionate developers, designers, and educators.
+                We're building the future of AI education. Join our team of passionate developers, designers, and marketers.
               </p>
             </FadeInText>
           </div>
@@ -57,13 +58,13 @@ const Hiring = () => {
                     <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
                       <CardContent className="p-6 text-center">
                         <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center text-2xl">
-                          💵
+                          <Icon icon="mdi:cash" className="text-3xl text-blue-400" />
                         </div>
                         <h3 className="text-xl font-bold mb-3 text-blue-400">Fixed Price</h3>
                         <p className="text-gray-300 mb-4">
-                          One-time payment upon successful MVP completion and launch
+                          One-time payment upon successful MVP completion and launch, no ownership after.
                         </p>
-                        <div className="text-2xl font-bold text-blue-400">$X,XXX</div>
+                        <div className="text-2xl font-bold text-blue-400">$X,XXX USD</div>
                         <p className="text-sm text-gray-400 mt-2">Negotiable based on role & experience</p>
                       </CardContent>
                     </Card>
@@ -71,13 +72,13 @@ const Hiring = () => {
                     <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
                       <CardContent className="p-6 text-center">
                         <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center text-2xl">
-                          📈
+                          <Icon icon="mdi:chart-line" className="text-3xl text-green-400" />
                         </div>
                         <h3 className="text-xl font-bold mb-3 text-green-400">Revenue Share</h3>
                         <p className="text-gray-300 mb-4">
-                          Percentage of company revenue for ongoing partnership
+                          Percentage of company revenue for one year, one year only.
                         </p>
-                        <div className="text-2xl font-bold text-green-400">X% - XX%</div>
+                        <div className="text-2xl font-bold text-green-400">4% - 8%</div>
                         <p className="text-sm text-gray-400 mt-2">Based on contribution & role</p>
                       </CardContent>
                     </Card>
@@ -85,7 +86,7 @@ const Hiring = () => {
 
                   <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-6 text-center">
                     <div className="flex items-center justify-center gap-2 mb-3">
-                      <span className="text-2xl">⚠️</span>
+                      <Icon icon="mdi:alert" className="text-2xl text-yellow-400" />
                       <h3 className="text-xl font-bold text-yellow-400">Important Notice</h3>
                     </div>
                     <p className="text-gray-300 mb-2">
@@ -114,7 +115,15 @@ const Hiring = () => {
                     <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
                       <CardContent className="p-6 text-center">
                         <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center text-3xl">
-                          {member.avatar}
+                          {typeof member.avatar === 'string' && member.avatar.startsWith('/') ? (
+                            <img
+                              src={member.avatar}
+                              alt={member.name}
+                              className="w-20 h-20 rounded-full object-cover border-4 border-orange-500 shadow-lg"
+                            />
+                          ) : (
+                            member.avatar
+                          )}
                         </div>
                         <h3 className="text-xl font-bold mb-2 text-white">{member.name}</h3>
                         <p className="text-orange-400 font-semibold mb-3">{member.role}</p>
@@ -188,10 +197,10 @@ const Hiring = () => {
           <FadeInText delay={1.6}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { icon: '🚀', title: 'Fast Growth', desc: 'Join a rapidly scaling startup with massive potential' },
-                { icon: '🌍', title: 'Remote First', desc: 'Work from anywhere with flexible hours and autonomy' },
-                { icon: '💡', title: 'Cutting Edge', desc: 'Work with the latest AI technologies and tools' },
-                { icon: '🎯', title: 'Impact', desc: 'Shape the future of AI education for millions' }
+                { icon: <Icon icon="mdi:rocket-launch" className="text-2xl" />, title: 'Fast Growth', desc: 'Join a rapidly scaling startup with massive potential' },
+                { icon: <Icon icon="mdi:earth" className="text-2xl" />, title: 'Remote First', desc: 'Work from anywhere with flexible hours and autonomy' },
+                { icon: <Icon icon="mdi:lightbulb-on" className="text-2xl" />, title: 'Cutting Edge', desc: 'Work with the latest AI technologies and tools' },
+                { icon: <Icon icon="mdi:bullseye-arrow" className="text-2xl" />, title: 'Impact', desc: 'Shape the future of AI education for millions' }
               ].map((item, index) => (
                 <FadeInText key={index} delay={1.8 + index * 0.1}>
                   <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">

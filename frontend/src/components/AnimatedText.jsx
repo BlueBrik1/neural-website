@@ -191,9 +191,18 @@ export const RotatingTaglines = ({ taglines, className = '' }) => {
     return () => clearInterval(interval);
   }, [taglines.length]);
 
+  const currentTagline = taglines[currentIndex];
+
   return (
     <div ref={elementRef} className={className}>
-      {taglines[currentIndex]}
+      {typeof currentTagline === 'object' && currentTagline !== null ? (
+        <div className="flex flex-col items-center justify-center">
+          {currentTagline.icon}
+          <span>{currentTagline.text}</span>
+        </div>
+      ) : (
+        currentTagline
+      )}
     </div>
   );
 };

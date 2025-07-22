@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation';
 import StatsCounter from '../components/StatsCounter';
 import { FadeInText, StaggeredText, GlowText, SkewText } from '../components/AnimatedText';
 import EnhancedCursorBackground from '../components/EnhancedCursorBackground';
+import { Icon } from '@iconify/react';
 
 const Vision = () => {
   return (
@@ -26,7 +27,7 @@ const Vision = () => {
             </FadeInText>
             <FadeInText delay={0.2}>
               <StaggeredText 
-                text="Democratizing AI education to create a world where everyone can harness the power of artificial intelligence."
+                text="Making AI simple enough for anyone to learn and use, even middle schoolers. We're building the bridge to close the AI skills gap."
                 className="text-xl text-gray-300 max-w-2xl mx-auto"
                 delay={0.2}
               />
@@ -62,9 +63,9 @@ const Vision = () => {
             </FadeInText>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { icon: '🌟', title: 'Accessibility', desc: 'AI education should be available to everyone, regardless of background or technical expertise.' },
-                { icon: '🎯', title: 'Quality', desc: 'We\'re committed to creating the highest quality educational content and experiences.' },
-                { icon: '🚀', title: 'Innovation', desc: 'We continuously push the boundaries of what\'s possible in AI education.' }
+                { icon: <Icon icon="mdi:star" className="text-2xl" />, title: 'Accessibility', desc: 'AI education should be available to everyone, regardless of background or technical expertise.' },
+                { icon: <Icon icon="mdi:bullseye-arrow" className="text-2xl" />, title: 'Quality', desc: 'We\'re committed to creating the highest quality educational content and experiences.' },
+                { icon: <Icon icon="mdi:rocket-launch" className="text-2xl" />, title: 'Innovation', desc: 'We continuously push the boundaries of what\'s possible in AI education.' }
               ].map((value, index) => (
                 <FadeInText key={index} delay={0.8 + index * 0.2}>
                   <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 card-hover">
