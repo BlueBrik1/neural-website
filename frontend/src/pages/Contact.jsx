@@ -139,9 +139,9 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-8">
               {[
-                { icon: <Icon icon="mdi:email" className="text-xl" />, title: 'Email', value: 'pixelandprintofficial@gmail.com', desc: 'For general inquiries, partnerships, or feedback about Neural.' },
-                { icon: <Icon icon="mdi:briefcase" className="text-xl" />, title: 'Careers', value: 'pixelandprintofficial@gmail.com', desc: 'Interested in joining our team? Check out our open positions.' },
-                { icon: <Icon icon="mdi:handshake" className="text-xl" />, title: 'Partnerships', value: 'pixelandprintofficial@gmail.com', desc: 'Let\'s collaborate to advance AI education together.' },
+                { icon: <Icon icon="mdi:email" className="text-xl" />, title: 'Email', value: 'hello@pixelandprintofficial.com', desc: 'For general inquiries, partnerships, or feedback about Neural.' },
+                { icon: <Icon icon="mdi:briefcase" className="text-xl" />, title: 'Careers', value: 'hello@pixelandprintofficial.com', desc: 'Interested in joining our team? Check out our open positions.' },
+                { icon: <Icon icon="mdi:handshake" className="text-xl" />, title: 'Partnerships', value: 'hello@pixelandprintofficial.com', desc: 'Let\'s collaborate to advance AI education together.' },
                 { icon: <Icon icon="mdi:earth" className="text-xl" />, title: 'Location', value: 'Atlanta, GA', desc: 'Our headquarters, though we\'re a global remote-first team.' }
               ].map((item, index) => (
                 <FadeInText key={index} delay={0.6 + index * 0.1}>
