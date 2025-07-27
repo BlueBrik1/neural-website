@@ -53,7 +53,7 @@ const Preorder = () => {
                       IMPORTANT: You MUST provide your email address so we can contact you and reserve your spot.
                     </span>
                   </div>
-                  <a href="https://buy.stripe.com/test_14A7sK0sfdWWdLA2vdcV200" target="_blank" rel="noopener noreferrer">
+                  <a href="https://buy.stripe.com/14A7sK0sfdWWdLA2vdcV200" target="_blank" rel="noopener noreferrer">
                     <PulseButton className="text-lg px-10 py-5 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 btn-shimmer text-white w-full max-w-xs mx-auto">
                       Preorder Neural
                     </PulseButton>
