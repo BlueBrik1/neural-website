@@ -1,6 +1,7 @@
 import React, { useEffect, Suspense } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useGtagPageview } from "./hooks/useGtagPageview";
 // Lazy load large page components for code splitting
 const Homepage = React.lazy(() => import("./pages/Homepage"));
 const Contact = React.lazy(() => import("./pages/Contact"));
@@ -11,6 +12,10 @@ const Preorder = React.lazy(() => import("./pages/Preorder"));
 
 const ScrollToTop = React.memo(function ScrollToTop() {
   const location = useLocation();
+  
+  // Track pageviews with Google Analytics
+  useGtagPageview();
+  
   useEffect(() => {
     window.scrollTo(0, 0);
     // No cleanup needed
