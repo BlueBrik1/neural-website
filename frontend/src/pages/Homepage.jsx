@@ -201,6 +201,50 @@ const Homepage = () => {
               </FadeInText>
             </div>
             
+            <FadeInText delay={0.2}>
+              <div className="relative mb-12">
+                <div className="bg-gradient-to-r from-orange-500 via-red-500 to-orange-500 rounded-xl p-[2px] animate-pulse-glow">
+                  <div className="bg-black/80 backdrop-blur-sm rounded-xl p-8">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-6 animate-float">
+                        <Icon icon="mdi:trophy" className="text-2xl text-orange-400" />
+                      </div>
+                      <GlowText>
+                        <h3 className="text-3xl font-bold text-white mb-4">
+                          Recent Funding Success
+                        </h3>
+                      </GlowText>
+                      <p className="text-xl text-gray-300 mb-4 leading-relaxed">
+                        Neural recently secured a <span className="text-orange-400 font-bold">$10,000 grant</span> from <span className="text-orange-400 font-semibold">Emergent Ventures</span>, a fund backed by Tyler Cowen for ambitious young founders. It's also advancing in the second round of the <span className="text-orange-400 font-semibold">Thiel Fellowship</span>, competing for a <span className="text-orange-400 font-bold">$200,000</span> equity-free award given to top under-20 entrepreneurs building bold ideas.
+                      </p>
+                      <div className="flex justify-center items-center gap-4 mt-6">
+                        <a 
+                          href="https://www.mercatus.org/emergent-ventures" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:scale-105 transition-transform duration-300"
+                        >
+                          <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30 px-4 py-2 text-sm font-semibold cursor-pointer hover:bg-orange-500/30 transition-colors">
+                            Emergent Ventures Grant
+                          </Badge>
+                        </a>
+                        <a 
+                          href="https://thielfellowship.org/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:scale-105 transition-transform duration-300"
+                        >
+                          <Badge className="bg-red-500/20 text-red-400 border-red-500/30 px-4 py-2 text-sm font-semibold cursor-pointer hover:bg-red-500/30 transition-colors">
+                            Thiel Fellowship
+                          </Badge>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeInText>
+            
             <FadeInText delay={0.3}>
               <div className="relative">
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 overflow-hidden glass">
