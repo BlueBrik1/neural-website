@@ -35,32 +35,33 @@ export const testimonialsData = [
 export const featuresData = [
   {
     id: 1,
-    title: 'Learn by Doing',
-    description: 'Practice with real AI tools and get instant feedback on your prompts',
+    title: 'Hands-on Lessons',
+    description: 'Learn AI and prompt engineering by actually doing it — not just watching videos',
     icon: '🎯',
     color: 'from-orange-500 to-red-600'
   },
   {
     id: 2,
-    title: 'AI Feedback',
-    description: 'Get personalized suggestions to improve your AI interaction skills',
+    title: 'Instant AI Feedback',
+    description: 'Get real-time feedback from AI to improve your answers and learn faster',
     icon: '🤖',
     color: 'from-orange-600 to-orange-700'
   },
   {
     id: 3,
-    title: 'Progress Tracking',
-    description: 'Visual skill trees and achievements keep you motivated',
+    title: 'Smart Progress Tracking',
+    description: 'See your growth with levels, streaks, and personalized goals',
     icon: '📈',
     color: 'from-red-500 to-orange-500'
   },
   {
     id: 4,
-    title: 'Community',
-    description: 'Connect with other AI learners and share your progress',
+    title: 'Peer Support + Challenges',
+    description: 'Join a community of students, builders, and beginners learning AI together',
     icon: '👥',
     color: 'from-orange-400 to-red-500'
   }
+  
 ];
 
 export const typingPhrases = [
@@ -87,35 +88,35 @@ export const teamData = [
   },
   {
     id: 3,
-    name: 'Could be you!',
-    role: 'Take a look below.',
-    avatar: '/Other.png',
-    bio: 'We are looking for a UI/UX Designer, Full Stack Developers, and Marketing Specialist.'
+    name: 'Julia Castro',
+    role: 'Full Stack Developer',
+    avatar: '/Julia.png',
+    bio: 'Freelance Full Stack Developer working full time on Neural\'s MVP'
   }
 ];
 
 export const jobOpenings = [
+  // {
+  //   id: 1,
+  //   title: 'Full Stack Developer',
+  //   type: 'Full-time',
+  //   location: 'Remote',
+  //   description: 'Join our core engineering team to build the next generation of AI learning tools.',
+  //   requirements: [
+  //     '5+ years of React/Node.js experience',
+  //     'Experience with AI/ML integrations',
+  //     'Strong understanding of modern web technologies',
+  //     'Passion for education technology'
+  //   ],
+  //   responsibilities: [
+  //     'Develop and maintain our learning platform',
+  //     'Integrate AI models and tools',
+  //     'Collaborate with design and product teams',
+  //     'Optimize performance and user experience'
+  //   ]
+  // },
   {
     id: 1,
-    title: 'Full Stack Developer',
-    type: 'Full-time',
-    location: 'Remote',
-    description: 'Join our core engineering team to build the next generation of AI learning tools.',
-    requirements: [
-      '5+ years of React/Node.js experience',
-      'Experience with AI/ML integrations',
-      'Strong understanding of modern web technologies',
-      'Passion for education technology'
-    ],
-    responsibilities: [
-      'Develop and maintain our learning platform',
-      'Integrate AI models and tools',
-      'Collaborate with design and product teams',
-      'Optimize performance and user experience'
-    ]
-  },
-  {
-    id: 2,
     title: 'UI/UX Designer',
     type: 'Part-time',
     location: 'Remote',
@@ -134,7 +135,7 @@ export const jobOpenings = [
     ]
   },
   {
-    id: 3,
+    id: 2,
     title: 'Assistant Full Stack Developer',
     type: 'Part-time',
     location: 'Remote',
@@ -153,7 +154,7 @@ export const jobOpenings = [
     ]
   },
   {
-    id: 4,
+    id: 3,
     title: 'Marketing Specialist',
     type: 'Full-time',
     location: 'Remote',

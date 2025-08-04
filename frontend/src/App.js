@@ -32,6 +32,19 @@ const Contact = lazyLoad(() => import("./pages/Contact"));
 const Hiring = lazyLoad(() => import("./pages/Hiring"));
 const Vision = lazyLoad(() => import("./pages/Vision"));
 const Preorder = lazyLoad(() => import("./pages/Preorder"));
+const Features = lazyLoad(() => import("./pages/Features"));
+const FAQ = lazyLoad(() => import("./pages/FAQ"));
+const Blog = lazyLoad(() => import("./pages/Blog"));
+
+// Individual blog post components
+const BlogPost1 = lazyLoad(() => import("./pages/BlogPost1"));
+const BlogPost2 = lazyLoad(() => import("./pages/BlogPost2"));
+const BlogPost3 = lazyLoad(() => import("./pages/BlogPost3"));
+const BlogPost4 = lazyLoad(() => import("./pages/BlogPost4"));
+const BlogPost5 = lazyLoad(() => import("./pages/BlogPost5"));
+const BlogPost6 = lazyLoad(() => import("./pages/BlogPost6"));
+const BlogPost7 = lazyLoad(() => import("./pages/BlogPost7"));
+const BlogPost8 = lazyLoad(() => import("./pages/BlogPost8"));
 
 // Enhanced loading component
 const LoadingSpinner = () => (
@@ -171,6 +184,17 @@ const App = React.memo(function App() {
                 <Route path="/hiring" element={<Hiring />} />
                 <Route path="/vision" element={<Vision />} />
                 <Route path="/preorder" element={<Preorder />} />
+                <Route path="/features" element={<Features />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/post1" element={<BlogPost1 />} />
+                <Route path="/blog/post2" element={<BlogPost2 />} />
+                <Route path="/blog/post3" element={<BlogPost3 />} />
+                <Route path="/blog/post4" element={<BlogPost4 />} />
+                <Route path="/blog/post5" element={<BlogPost5 />} />
+                <Route path="/blog/post6" element={<BlogPost6 />} />
+                <Route path="/blog/post7" element={<BlogPost7 />} />
+                <Route path="/blog/post8" element={<BlogPost8 />} />
               </Routes>
             </Suspense>
           </ErrorBoundary>

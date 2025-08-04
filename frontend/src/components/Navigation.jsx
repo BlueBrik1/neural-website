@@ -24,6 +24,24 @@ const Navigation = () => {
               Home
             </Link>
             <Link 
+              to="/features" 
+              className={`transition-colors ${isActive('/features') ? 'text-orange-400' : 'text-gray-300 hover:text-white'}`}
+            >
+              Features
+            </Link>
+            <Link 
+              to="/blog" 
+              className={`transition-colors ${isActive('/blog') ? 'text-orange-400' : 'text-gray-300 hover:text-white'}`}
+            >
+              Blog
+            </Link>
+            <Link 
+              to="/faq" 
+              className={`transition-colors ${isActive('/faq') ? 'text-orange-400' : 'text-gray-300 hover:text-white'}`}
+            >
+              FAQ
+            </Link>
+            <Link 
               to="/vision" 
               className={`transition-colors ${isActive('/vision') ? 'text-orange-400' : 'text-gray-300 hover:text-white'}`}
             >
@@ -71,6 +89,27 @@ const Navigation = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Home
+            </Link>
+            <Link 
+              to="/features" 
+              className={`block transition-colors ${isActive('/features') ? 'text-orange-400' : 'text-gray-300 hover:text-white'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Features
+            </Link>
+            <Link 
+              to="/blog" 
+              className={`block transition-colors ${isActive('/blog') ? 'text-orange-400' : 'text-gray-300 hover:text-white'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link 
+              to="/faq" 
+              className={`block transition-colors ${isActive('/faq') ? 'text-orange-400' : 'text-gray-300 hover:text-white'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              FAQ
             </Link>
             <Link 
               to="/vision" 
